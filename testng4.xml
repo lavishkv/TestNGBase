@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="TestNGSuite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="org.example.Listeners"></listener>
+    </listeners>
+    <test name="TestNGTests">
+        <parameter name="URL" value="127.0.0.1"></parameter>
+        <classes>
+            <class name="org.example.Basics" />
+            <class name="org.example.Basics2">
+            </class>
+        </classes>
+    </test>
+</suite>
